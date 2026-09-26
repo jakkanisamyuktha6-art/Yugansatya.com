@@ -1,0 +1,768 @@
+/* ================= GENERAL ================= */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    background: #f5f0e9;
+    color: #1c1a18;
+    line-height: 1.7;
+}
+
+img {
+    width: 100%;
+    display: block;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+button,
+input,
+textarea,
+select {
+    font-family: inherit;
+}
+
+
+/* ================= NAVBAR ================= */
+
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    padding: 22px 6%;
+
+    background: rgba(245, 240, 233, 0.96);
+    backdrop-filter: blur(10px);
+
+    transition: 0.3s;
+}
+
+.logo {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: 30px;
+    font-weight: 700;
+    letter-spacing: 3px;
+}
+
+.logo span {
+    display: block;
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 7px;
+    letter-spacing: 2px;
+    font-weight: 500;
+    margin-top: -5px;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    gap: 28px;
+}
+
+nav a {
+    font-size: 12px;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    opacity: 0.5;
+}
+
+.nav-button {
+    padding: 10px 18px;
+    border: 1px solid #1c1a18;
+}
+
+.menu-btn {
+    display: none;
+
+    border: none;
+    background: transparent;
+
+    font-size: 25px;
+    cursor: pointer;
+}
+
+
+/* ================= HERO ================= */
+
+.hero {
+    min-height: 100vh;
+
+    display: flex;
+    align-items: center;
+
+    padding: 140px 8%;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(20, 15, 10, 0.68),
+            rgba(20, 15, 10, 0.15)
+        ),
+        url("image/dress14.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.hero-content {
+    max-width: 650px;
+}
+
+.small-title {
+    font-size: 11px;
+    letter-spacing: 4px;
+    font-weight: 500;
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(60px, 8vw, 110px);
+    line-height: 0.9;
+
+    font-weight: 500;
+
+    margin-bottom: 30px;
+}
+
+.hero-text {
+    max-width: 520px;
+    font-size: 15px;
+    margin-bottom: 35px;
+}
+
+
+/* ================= BUTTON ================= */
+
+.primary-btn {
+    display: inline-block;
+
+    padding: 14px 28px;
+
+    background: #1c1a18;
+    color: white;
+
+    font-size: 11px;
+    letter-spacing: 2px;
+
+    border: none;
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.primary-btn:hover {
+    transform: translateY(-3px);
+    opacity: 0.85;
+}
+
+
+/* ================= INTRO ================= */
+
+.intro {
+    max-width: 850px;
+
+    margin: auto;
+
+    padding: 130px 25px;
+
+    text-align: center;
+}
+
+.intro h2,
+.section-heading h2,
+.about-content h2,
+.custom-content h2 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(45px, 6vw, 75px);
+
+    font-weight: 500;
+    line-height: 1;
+}
+
+.intro > p:last-child {
+    margin: 30px auto 0;
+    color: #666;
+}
+    max-width: 650px;
+
+
+/* ================= SECTION ================= */
+
+.section {
+    padding: 110px 7%;
+}
+
+.section-heading {
+    text-align: center;
+    max-width: 700px;
+
+    margin: 0 auto 70px;
+}
+
+.section-heading > p:last-child {
+    margin-top: 20px;
+    color: #777;
+}
+
+
+/* ================= ABOUT ================= */
+
+.about {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 80px;
+
+    align-items: center;
+
+    background: #e8dfd3;
+}
+
+.about-image img {
+    height: 650px;
+    object-fit: cover;
+}
+
+.about-content {
+    max-width: 500px;
+}
+
+.about-content h2 {
+    margin-bottom: 30px;
+}
+
+.about-content p {
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.text-link {
+    display: inline-block;
+
+    margin-top: 15px;
+
+    border-bottom: 1px solid #1c1a18;
+
+    font-size: 12px;
+    letter-spacing: 2px;
+}
+
+
+/* ================= COLLECTIONS ================= */
+
+.collection-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.collection-card {
+    background: #e8dfd3;
+    overflow: hidden;
+   
+}
+
+.collection-card img {
+    height: 520px;
+    object-fit: cover;
+    transition: 0.5s;
+}
+
+.collection-card:hover img {
+    transform: scale(1.04);
+}
+
+.card-content {
+    padding: 25px;
+}
+
+.card-content p {
+    font-size: 11px;
+    letter-spacing: 2px;
+}
+
+.card-content h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 32px;
+    font-weight: 500;
+
+    margin: 5px 0;
+}
+
+.card-content span {
+    color: #777;
+    font-size: 12px;
+}
+
+
+/* ================= QUOTE ================= */
+
+.quote-section {
+    min-height: 500px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 80px 10%;
+
+    text-align: center;
+
+    background:
+        linear-gradient(
+            rgba(20, 15, 10, 0.45),
+            rgba(20, 15, 10, 0.45)
+        ),
+        url("image/dress16.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.quote-content {
+    max-width: 900px;
+}
+
+.quote-content p {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: clamp(38px, 5vw, 65px);
+
+    line-height: 1.1;
+}
+
+.quote-content span {
+    display: block;
+
+    margin-top: 30px;
+
+    font-size: 10px;
+    letter-spacing: 4px;
+}
+
+
+/* ================= ARTWORK ================= */
+
+.art-grid {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    grid-auto-rows: 300px;
+
+    gap: 15px;
+}
+
+.art-item {
+    overflow: hidden;
+}
+
+.art-item img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+
+    transition: 0.5s;
+}
+
+.art-item:hover img {
+    transform: scale(1.05);
+}
+
+.art-item.tall {
+    grid-row: span 2;
+}
+
+
+/* ================= PROCESS ================= */
+
+.process {
+    background: #e8dfd3;
+}
+
+.process-grid {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    max-width: 1200px;
+
+    margin: auto;
+}
+
+.process-box {
+    padding: 30px;
+
+    border-top: 1px solid #aaa;
+}
+
+.process-box span {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 35px;
+}
+
+.process-box h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 30px;
+    font-weight: 500;
+
+    margin: 20px 0 10px;
+}
+
+.process-box p {
+    color: #666;
+    font-size: 13px;
+}
+
+
+/* ================= CUSTOM ================= */
+
+.custom-section {
+    min-height: 600px;
+
+    display: flex;
+    align-items: center;
+
+    padding: 100px 10%;
+
+    background:
+        linear-gradient(
+            to right,
+            rgba(20, 15, 10, 0.7),
+            rgba(20, 15, 10, 0.15)
+        ),
+        url("image/dress17.jpeg");
+
+    background-size: cover;
+    background-position: center;
+
+    color: white;
+}
+
+.custom-content {
+    max-width: 600px;
+}
+
+.custom-content h2 {
+    margin-bottom: 30px;
+}
+
+.custom-content > p:not(.small-title) {
+    max-width: 500px;
+
+    margin-bottom: 30px;
+}
+
+
+/* ================= CONTACT ================= */
+
+.contact {
+    background: #f5f0e9;
+}
+
+.contact-container {
+    max-width: 1100px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 0.8fr 1.2fr;
+
+    gap: 80px;
+}
+
+.contact-info h3 {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 42px;
+    font-weight: 500;
+}
+
+.contact-info > p {
+    color: #777;
+}
+
+.contact-details {
+    margin-top: 40px;
+}
+
+.contact-details p {
+    margin-bottom: 15px;
+    font-size: 13px;
+}
+
+.contact-form {
+    background: #e8dfd3;
+
+    padding: 40px;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+
+    font-size: 10px;
+    letter-spacing: 2px;
+
+    margin-bottom: 8px;
+}
+
+.input-group input,
+.input-group textarea,
+.input-group select {
+    width: 100%;
+
+    padding: 14px;
+
+    border: none;
+    border-bottom: 1px solid #999;
+
+    background: transparent;
+
+    outline: none;
+
+    font-size: 13px;
+}
+
+.input-group textarea {
+    resize: vertical;
+}
+
+.contact-form .primary-btn {
+    margin-top: 10px;
+}
+
+#formMessage {
+    margin-top: 20px;
+
+    font-size: 12px;
+}
+
+
+/* ================= FOOTER ================= */
+
+footer {
+    background: #1c1a18;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 70px 20px;
+}
+
+.footer-logo {
+    font-family: 'Cormorant Garamond', serif;
+
+    font-size: 42px;
+
+    letter-spacing: 4px;
+}
+
+footer > p {
+    font-size: 11px;
+    color: #aaa;
+
+    margin: 10px 0 30px;
+}
+
+.footer-links {
+    display: flex;
+
+    justify-content: center;
+
+    gap: 25px;
+
+    margin-bottom: 35px;
+}
+
+.footer-links a {
+    font-size: 11px;
+}
+
+.copyright {
+    border-top: 1px solid #444;
+
+    padding-top: 25px;
+}
+
+
+/* ================= ANIMATION ================= */
+
+.reveal {
+    opacity: 0;
+
+    transform: translateY(35px);
+
+    transition: opacity 0.8s ease,
+                transform 0.8s ease;
+}
+
+.reveal.active {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+
+/* ================= MOBILE ================= */
+
+@media (max-width: 900px) {
+
+    nav {
+        position: absolute;
+
+        top: 80px;
+        right: 0;
+
+        width: 100%;
+
+        display: none;
+
+        flex-direction: column;
+
+        padding: 30px;
+
+        background: #f5f0e9;
+    }
+
+    nav.active {
+        display: flex;
+    }
+
+    .menu-btn {
+        display: block;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-container {
+        grid-template-columns: 1fr;
+        gap: 50px;
+    }
+
+}
+
+
+@media (max-width: 700px) {
+
+    .navbar {
+        padding: 18px 5%;
+    }
+
+    .logo {
+        font-size: 24px;
+    }
+
+    .hero {
+        padding: 120px 7%;
+    }
+
+    .about {
+        grid-template-columns: 1fr;
+
+        gap: 40px;
+    }
+
+    .about-image img {
+        height: 500px;
+    }
+
+    .collection-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .collection-card img {
+        height: 500px;
+    }
+
+    .art-grid {
+        grid-template-columns: 1fr 1fr;
+
+        grid-auto-rows: 220px;
+    }
+
+    .process-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .contact-form {
+        padding: 25px;
+    }
+
+}
+
+
+@media (max-width: 450px) {
+
+    .hero h1 {
+        font-size: 55px;
+    }
+
+    .section {
+        padding: 80px 6%;
+    }
+
+    .intro {
+        padding: 90px 20px;
+    }
+
+    .art-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .art-item.tall {
+        grid-row: span 1;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+    }
+
+}
